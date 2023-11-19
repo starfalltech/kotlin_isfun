@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">task_manager</string>
+    <string name="title">All tasks completed\n</string>
+</resources>
