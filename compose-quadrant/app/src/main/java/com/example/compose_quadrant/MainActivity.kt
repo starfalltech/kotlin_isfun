@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScopeInstance.weight
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -21,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.compose_quadrant.ui.theme.ComposequadrantTheme
@@ -44,55 +44,51 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CardItemRow(title: String, desc: String, color: Color, modifier: Modifier) {
-    Box(
+    Column(
         modifier = modifier
-            .background(color = color)
             .fillMaxSize()
+            .background(color = color)
+            .padding(16.dp),
+       verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp),
-            Arrangement.Center,
-            Alignment.CenterHorizontally
-        ) {
-            Text(text = title, fontWeight = FontWeight.Bold)
-            Text(text = desc,)
-        }
+        Text(text = title, fontWeight = FontWeight.Bold)
+        Text(text = desc, textAlign = TextAlign.Justify)
     }
 }
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column(modifier = Modifier
-        .fillMaxHeight()
-        .fillMaxWidth()) {
-        Row (modifier = Modifier.weight(2f)){
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
+        Row(modifier = Modifier.weight(1f)) {
             CardItemRow(
                 title = "Text composable",
                 desc = "Displays text and follows the recommended Material Design guidelines.",
                 color = Color(0xFFEADDFF),
-                modifier = Modifier.weight(2f)
+                modifier = Modifier.weight(1f)
             )
             CardItemRow(
                 title = "Text composable",
                 desc = "Displays text and follows the recommended Material Design guidelines.",
-                color = Color(0xFFEADDFF),
-                modifier = Modifier.weight(2f)
+                color = Color(0xFFD0BCFF),
+                modifier = Modifier.weight(1f)
             )
         }
-        Row (modifier = Modifier.weight(2f)){
+        Row(modifier = Modifier.weight(1f)) {
             CardItemRow(
                 title = "Text composable",
                 desc = "Displays text and follows the recommended Material Design guidelines.",
-                color = Color(0xFFEADDFF),
-                modifier = Modifier.weight(2f)
+                color = Color(0xFFB69DF8),
+                modifier = Modifier.weight(1f)
             )
             CardItemRow(
                 title = "Text composable",
                 desc = "Displays text and follows the recommended Material Design guidelines.",
-                color = Color(0xFFEADDFF),
-                modifier = Modifier.weight(2f)
+                color = Color(0xFFF6EDFF),
+                modifier = Modifier.weight(1f)
             )
         }
     }
