@@ -8,11 +8,12 @@
 
 ## Overview
 
-Briefly introduce your Jetpack Compose project. Explain its purpose, key features, and any unique aspects.
+this Project for Learn Jetpack Compose
 
 ## Screenshots
 
-Include screenshots or GIFs showcasing your app's UI and features.
+![Screenshot from 2023-12-03 01-33-56.png](..%2F..%2F..%2F..%2Fhome%2Fretr0%2FPictures%2FScreenshots%2FScreenshot%20from%202023-12-03%2001-33-56.png)
+
 
 ## Prerequisites
 
@@ -22,8 +23,3 @@ List any prerequisites or requirements for running the project. This might inclu
 
 Provide instructions on how to set up the project locally. Include steps for cloning the repository, configuring any necessary settings, and running the app.
 
-```bash
-# Example commands
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-./gradlew installDebug
