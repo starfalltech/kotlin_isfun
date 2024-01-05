@@ -2,8 +2,6 @@ package com.example.bussines_card_app
 
 import org.junit.Test
 
-import org.junit.Assert.*
-
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -12,6 +10,13 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        val letter: Char = readLine()!![0]
+        val text: String = readln()
+        val result = letter_count(letter, text)
+        println(result)
+    }
+
+    private fun letter_count(letter: Char, text:String):String{
+        return text.indexOf(letter).toString();
     }
 }
